@@ -81,4 +81,30 @@ For FA
 
 For RCA 
 - $Cout_0 = ((a_0 ^ b_0) & cin) | (a_0 & b_0)$
-- $Cout_1 = $
+- $Cout_1 = ((a_1 ^ b_1) & cout_0) | (a_1 & b_1)$
+- $Cout_2 = ((a_2 ^ b_2) & cout_1) | (a_2 & b_2)$
+- $Cout_3 = ((a_3 ^ b_3) & cout_2) | (a_3 & b_3)$
+--
+
+<!-- .slide: style="text-align: left;"> --> 
+## observe
+Define
+- $G = a & b$
+- $P = {a} $^$ {b}$
+
+$$
+Cout_1 = ((a_1 ^ b_1) & (((a_0 ^ b_0) & cin) | (a_0 & b_0))) | (a_1 & b_1)
+Cout_3 = ((a_3 ^ b_3) & (((a_2 ^ b_2) & (((a_1 ^ b_1) & 
+           (((a_0 ^ b_0) & cin) | (a_0 & b_0))) | (a_1 & b_1))) | 
+           (a_2 & b_2))) | (a_3 & b_3)
+$$
+--
+
+<!-- .slide: style="text-align: left;"> --> 
+## observe
+$$
+Cout_1 = ((a_1 ^ b_1) & (((a_0 ^ b_0) & cin) | (a_0 & b_0))) | (a_1 & b_1)
+Cout_3 = ((a_3 ^ b_3) & (((a_2 ^ b_2) & (((a_1 ^ b_1) & 
+           (((a_0 ^ b_0) & cin) | (a_0 & b_0))) | (a_1 & b_1))) | 
+           (a_2 & b_2))) | (a_3 & b_3)
+$$
