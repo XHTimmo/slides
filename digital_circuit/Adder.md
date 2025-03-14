@@ -64,4 +64,21 @@ series adder
 ![RCA](assets/Adder/RCA.png)
 - $D(RCA_c)=12d$ or $D(RCA_c)=9d$ ? 
 - Can it be fater?
+----
 
+<!-- .slide: style="text-align: left;"> --> 
+## observe
+- $D(cout)=3d$
+- $D(sum)=2d$
+![FAD](assets/Adder/FAD.png)
+--
+
+<!-- .slide: style="text-align: left;"> --> 
+## observe
+For FA
+- $cout = ((a ^ b) & cin) | (a & b)$
+- $sum = a ^ b ^ cin$
+
+For RCA 
+- $Cout_0 = ((a_0 ^ b_0) & cin) | (a_0 & b_0)$
+- $Cout_1 = $
